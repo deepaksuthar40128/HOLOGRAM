@@ -1,0 +1,75 @@
+.left {
+    padding: 28px;
+    border-right: 1px solid black;
+    width: max-content;
+    overflow: auto;
+    height: 84vh;
+}
+
+.main_chat {
+    display: flex;
+}
+
+.right {
+    box-sizing: border-box;
+    padding: 130px 20px 0 20px;
+    width: 74%;
+    overflow: auto;
+    height: 84vh;
+}
+
+.fright {
+    float: right;
+}
+.flow_div{
+    width: max-content;
+}
+.send_msz{
+    width: 70%;
+    position: fixed;
+    height: 40px;
+    background-color: white;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.send_msz input{
+    width: 90%;
+    margin-right:20px ;
+    height: 25px;
+    padding-left: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+}
+.send_msz svg{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1450px) {
+    .main_chat {
+        display: block;
+    }
+
+    .left {
+        width: 100%;
+        height: auto;
+        border: none;
+        border-bottom: 1px solid;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .left div {
+        display: inline-block;
+        margin: 5px;
+    }
+    .send_msz{
+        width: 90%;
+    }
+}

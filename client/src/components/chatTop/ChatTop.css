@@ -1,0 +1,48 @@
+.main_top {
+    box-shadow: 0 0 5px 2px #d1d1d1;
+    border-radius: 5px;
+    width: 70%;
+    padding: 10px;
+    z-index: 1;
+    position: fixed;
+    background: white;
+    transform: translate(0px, -110px);
+    box-sizing: border-box;
+}
+
+.main_top a {
+    display: flex;
+    align-items: center;
+
+}
+
+.profile_top {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 25px;
+}
+
+.profile_top img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1450px) {
+    .main_top {
+        width: 97%;
+position: static;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .main_top {
+        width: 90%;
+       
+    }
+    .username{
+        font-size: 17px;
+    }
+}

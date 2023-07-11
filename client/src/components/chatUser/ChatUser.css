@@ -1,0 +1,53 @@
+.main_box {
+    height: 100px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 5px 2px #d1d1d1;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile_img {
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.profile_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.information h2 {
+    font-size: 22px;
+}
+
+.information p {
+    color: grey;
+}
+
+.highlight_user {
+    background: #e6e6e6 !important;
+}
+
+@media only screen and (max-width: 1450px) {
+    .main_box {
+        width: 150px;
+        height: auto;
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .profile_img {
+        display: block !important;
+    }
+
+    .information p {
+        display: none;
+    }
+}

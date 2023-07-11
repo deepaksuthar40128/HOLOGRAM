@@ -1,0 +1,27 @@
+.main_left_box {
+    max-width: 20rem;
+    padding: 20px;
+    position: fixed;
+    top: 125px;
+    left: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #d9d9d9;
+}
+
+.main_left_box .tags {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1560px) {
+    .main_left_box {
+        position: static;
+        max-width: 50rem;
+        margin: 20px auto;
+        box-sizing: border-box;
+
+    }
+
+    .main_left_box .tags {
+        width: max-content;
+    }
+}

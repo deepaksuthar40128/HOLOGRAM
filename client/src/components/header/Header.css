@@ -1,0 +1,108 @@
+.main_header_div {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-shadow: 0 5px 5px 2px rgb(223, 223, 223);
+    padding: 10px 0;
+}
+
+.left_header {
+    width: 30%;
+}
+
+.logo_img {
+    height: 80px;
+    max-width: 150px;
+}
+
+.logo_img img {
+    height: 100%;
+    width: 100%;
+}
+
+.mid_header {
+    width: 40%;
+}
+
+.mid_header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.nav_link {
+    position: relative;
+    font-size: 25px;
+}
+
+.right_header {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+}
+
+.right_header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* float: left; */
+    /* margin: auto; */
+    max-width: 202px;
+    margin-right: 20px;
+}
+
+.active {
+    color: rgb(156, 156, 156);
+}
+
+.userProfile_header {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.username_header {
+    font-size: 20px;
+    width: max-content;
+    margin-right: 20px;
+}
+
+.userProfile_header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.notify_icon {
+    position: absolute;
+    display: block;
+    left: 13px;
+    top: -8px;
+    background: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+
+.Loader_icon {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.Loader_icon svg {
+    animation: rotateme 1s linear infinite;
+}
+
+@media only screen and (max-width: 600px) {
+    .username_header {
+        display: none;
+    }
+}

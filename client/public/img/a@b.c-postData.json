@@ -1,0 +1,28 @@
+{
+    "_id": "6491913816eb2b87c1d5e43c",
+    "email": "a@b.c",
+    "photo": "https://mydbms.s3.us-west-2.amazonaws.com/1687261493849-353852306_1061174794765855_6221613456778035586_n.jpg",
+    "text": "Infinty",
+    "tags": [
+        "Old-Age",
+        "Money",
+        "Used-Things",
+        ""
+    ],
+    "location": [
+        "India",
+        "Haryana",
+        "Hisar",
+        "125005",
+        "World",
+        "Niyana"
+    ],
+    "likes": 1,
+    "createdAt": "3 weeks ago",
+    "updatedAt": "2023-07-11T09:13:13.036Z",
+    "__v": 0,
+    "userprofile": "https://mydbms.s3.us-west-2.amazonaws.com/1684151306898-download.jpg",
+    "username": "temp",
+    "user_like": true,
+    "comments": 2
+}

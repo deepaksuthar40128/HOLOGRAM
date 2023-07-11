@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_login {
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 10rem;
+    box-sizing: border-box;
+}
+
+.login {
+    max-width: 20rem;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 5px 2px rgb(216, 216, 216);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.heading_login {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.form {
+    width: 100%;
+}
+
+.form input,
+select {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    /* height: 20px; */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(206, 206, 206);
+    outline: none;
+}
+
+.form input:focus {
+    box-shadow: 0 0 2px 1px rgb(202, 255, 202);
+}
+
+.btn {
+    display: block;
+    height: 25px;
+    padding: 5px;
+    background-color: rgb(121, 185, 118);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(107, 161, 106);
+}
+
+.forgot_password {
+    text-align: right;
+    font-size: 10px;
+    color: grey;
+    margin-right: 5px;
+}
+
+.forgot_password:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+.rotate_loading_icon {
+    animation: rotateme 1s linear infinite;
+}
+@keyframes rotateme {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

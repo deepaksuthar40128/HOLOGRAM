@@ -1,0 +1,33 @@
+.chatbox {
+    box-shadow: 0 0 5px 2px #d1d1d1;
+    width: 25%;
+    padding: 23px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 5px;
+    clear: both;
+}
+.mszTime{
+    text-align: end;
+}
+
+@media only screen and (max-width: 1450px) {
+    .chatbox {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .chatbox {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .chatbox {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .chatbox {
+        width: 78%;
+    }
+}

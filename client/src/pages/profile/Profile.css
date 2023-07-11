@@ -1,0 +1,170 @@
+.upper_profile {
+    box-shadow: 0 0 5px 1px #bdbdbd;
+}
+
+.background {
+    width: 100%;
+    height: 300px;
+}
+
+.background span {
+    font-size: 30px;
+    position: relative;
+    left: 17px;
+    top: -53px;
+    cursor: pointer;
+    color: white;
+}
+
+.background img,
+.userProfile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frontground {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userProfile {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 100%;
+    transform: translate(0, -50%);
+}
+
+.b1 {
+    width: 40%;
+}
+
+.b1 span {
+    position: relative;
+    display: block;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    width: 40px;
+    font-size: 18px;
+    border: 1px solid;
+    background: #ffffff;
+    height: 40px;
+    top: -162px;
+    left: 68px;
+    cursor: pointer;
+}
+
+.about {
+    width: 30%;
+    transform: translate(-30%, 10px);
+}
+
+.username {
+    font-size: 30px !important;
+    font-weight: 600;
+}
+
+.bio {
+    padding: 11px 0;
+}
+
+.update_btn {
+    padding: 5px;
+    border: none;
+    background: #5aaf5a;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+}
+
+
+
+.myform div {
+    margin: 5px 0;
+}
+
+.myform label {
+    display: block;
+}
+
+.myform span {
+    font-size: 10px;
+    color: red;
+}
+
+.myform textarea {
+    padding: 10px;
+    margin-top: 2px;
+    width: 305px;
+    height: 50px;
+    outline: none;
+}
+
+.user_level_points {
+    width: 30%;
+}
+
+.points {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    color: red;
+    font-size: 25px;
+}
+
+.main_out_bar {
+    width: 100%;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inner_bar {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    transition: all 2s;
+}
+
+.levels {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+#user_level {
+    color: red;
+}
+
+@media only screen and (max-width: 900px) {
+    .b1 {
+        width: 100%;
+    }
+
+    .frontground {
+        height: max-content;
+    }
+
+    .about {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        transform: translate(10px, -75px);
+    }
+        .user_level_points{
+            width: 90%;
+            margin: auto;
+        }
+}
