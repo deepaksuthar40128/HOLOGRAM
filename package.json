@@ -17,6 +17,7 @@
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "image-size": "^1.0.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.5",
     "multer": "^1.4.5-lts.1",
@@ -25,6 +26,7 @@
     "nodemailer": "^6.9.1",
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
+    "sharp": "^0.32.2",
     "timeago.js": "^4.0.2"
   }
 }

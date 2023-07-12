@@ -2,29 +2,10 @@ import Express from "express";
 import { verifyUser } from "../utils/verifyUser.js";
 import Users from "../models/Users.js";
 import genError from "../utils/genError.js";
-import multer from "multer";
-import multerS3 from "multer-s3"
-import AWS from "aws-sdk"
 import dotenv from "dotenv"
+import { compressAndOverwrite, upload } from "../utils/imageCompresser.js";
 dotenv.config({ path: ".env" });
 const app = Express();
-
-const s3 = new AWS.S3({
-    accessKeyId: process.env.AWSKEY,
-    secretAccessKey: process.env.AWSPASSWORD,
-    region: 'us-west-2'
-});
-
-const upload = multer({
-    storage: multerS3({
-        s3: s3,
-        bucket: 'mydbms',
-        contentType: multerS3.AUTO_CONTENT_TYPE,
-        key: function (req, file, cb) {
-            cb(null, Date.now().toString() + '-' + file.originalname)
-        }
-    })
-})
 
 app.get('/User/:email', verifyUser, async (req, res, next) => {
     try {
@@ -45,8 +26,7 @@ app.post('/updateBio', verifyUser, async (req, res, next) => {
     }
 })
 
-
-app.post('/updateProfileImg', verifyUser, upload.single('file'), async (req, res, next) => {
+app.post('/updateProfileImg', verifyUser, upload.single('file'), (req, res, next) => compressAndOverwrite(req, res, next, 100, false, 100, 100, 0), async (req, res, next) => {
     try {
         let data = await Users.findOneAndUpdate({ email: req.user.email }, { img: req.file.location }, { new: true });
         res.status(200).json(data._doc);
@@ -56,7 +36,7 @@ app.post('/updateProfileImg', verifyUser, upload.single('file'), async (req, res
 })
 
 
-app.post('/updateBGImg', verifyUser, upload.single('file'), async (req, res, next) => {
+app.post('/updateBGImg', verifyUser, upload.single('file'), (req, res, next) => compressAndOverwrite(req, res, next, 100, false, 300, 1000, 0), async (req, res, next) => {
     try {
         let data = await Users.findOneAndUpdate({ email: req.user.email }, { bg: req.file.location }, { new: true });
         res.status(200).json(data._doc);

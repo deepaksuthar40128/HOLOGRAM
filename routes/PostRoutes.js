@@ -1,7 +1,4 @@
 import Express from "express";
-import multer from "multer";
-import multerS3 from "multer-s3"
-import AWS from "aws-sdk"
 import dotenv from "dotenv"
 dotenv.config({ path: ".env" });
 import timeago from "timeago.js"
@@ -11,26 +8,11 @@ import Users from "../models/Users.js";
 import fetch from "node-fetch";
 import genError from "../utils/genError.js";
 import comments from "../models/comments.js";
+import { compressAndOverwrite, upload } from "../utils/imageCompresser.js";
 
-const s3 = new AWS.S3({
-    accessKeyId: process.env.AWSKEY,
-    secretAccessKey: process.env.AWSPASSWORD,
-    region: 'us-west-2'
-});
-
-const upload = multer({
-    storage: multerS3({
-        s3: s3,
-        bucket: 'mydbms',
-        contentType: multerS3.AUTO_CONTENT_TYPE,
-        key: function (req, file, cb) {
-            cb(null, Date.now().toString() + '-' + file.originalname)
-        }
-    })
-})
 const app = Express();
 
-app.post('/feedPost', verifyUser, upload.single('file'), async (req, res, next) => {
+app.post('/feedPost', verifyUser, upload.single('file'), (req, res, next) => compressAndOverwrite(req, res, next, 100, true, 100, 100, 500), async (req, res, next) => {
     let tags = req.body.tags.split('/');
     let user = await Users.findById(req.user._id);
     let location = [];
