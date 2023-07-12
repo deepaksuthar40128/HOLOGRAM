@@ -9,6 +9,8 @@ This is a MERN (MongoDB, Express.js, React.js, Node.js) social app that allows u
 ## Features
 
 - **Public Key Authentication**: The app uses public key authentication for secure user authentication.
+- **Dynamic Loading**: Only load more posts after viewing of old posts.
+- **Compressed Posts**: Automattically compress the images to save load time.
 - **AWS S3 Integration**: User images are stored in AWS S3, providing scalable and reliable image storage.
 - **MongoDB with connect-mongo-session**: MongoDB is used as the database, and connect-mongo-session is used for session management.
 
