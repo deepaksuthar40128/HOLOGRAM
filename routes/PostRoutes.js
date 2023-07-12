@@ -136,7 +136,8 @@ app.get('/deletePost/:id', verifyUser, async (req, res, next) => {
         }
         else {
             if (Post.email === req.user.email) {
-                // await Posts.findByIdAndDelete(req.params.id);
+                await comments.deleteMany({ postId: req.params.id });
+                await Posts.findByIdAndDelete(req.params.id);
                 res.status(200).json({ success: true });
             } else {
                 return next(genError(404, "You can Only Delete Your Post!!"));
